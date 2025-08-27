@@ -1,8 +1,8 @@
-# Homebrew Tap for AWD CLI
+# Homebrew Tap for APM CLI
 
-This is the official Homebrew tap for [AWD CLI](https://github.com/danielmeppiel/awd-cli).
+This is the official Homebrew tap for [APM CLI](https://github.com/danielmeppiel/apm-cli).
 
-## What is AWD CLI?
+## What is APM CLI?
 
 **The NPM for AI-Native Development** - Natural language in Markdown is the new scripting language. Now you can build, package, share, and run Markdown agentic prompts and workflows across any LLM runtime.
 
@@ -11,28 +11,28 @@ This is the official Homebrew tap for [AWD CLI](https://github.com/danielmeppiel
 ## Installation
 
 ```bash
-brew tap danielmeppiel/awd-cli
-brew install awd-cli
+brew tap danielmeppiel/apm-cli
+brew install apm-cli
 ```
 
 ## Quick Start
 
 ```bash
 # Setup AI runtime with GitHub Models
-awd runtime setup codex
+apm runtime setup codex
 export GITHUB_TOKEN=your_token_here
 
-# Initialize your first AWD project
-awd init my-hello-world
+# Initialize your first APM project
+apm init my-hello-world
 cd my-hello-world
 
 # Install and run
-awd install
-awd run start --param name="Developer"
+apm install
+apm run start --param name="Developer"
 ```
 
 ## More Information
 
-Visit the [main repository](https://github.com/danielmeppiel/awd-cli) for complete documentation, examples, and guides.
+Visit the [main repository](https://github.com/danielmeppiel/apm-cli) for complete documentation, examples, and guides.
 
-**AWD makes AI prompts as shareable and reusable as code packages.**
+**APM makes AI prompts as shareable and reusable as code packages.**

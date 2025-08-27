@@ -31,13 +31,13 @@ jobs:
           echo "Linux x86_64 SHA: $LINUX_X86_64_SHA"
           
           # Generate the formula from template
-          cp Formula/awd-cli.rb.template Formula/awd-cli.rb
+          cp Formula/apm-cli.rb.template Formula/apm-cli.rb
           
           # Replace template placeholders with actual values
-          sed -i "s/{{VERSION}}/$CLEAN_VERSION/g" Formula/awd-cli.rb
-          sed -i "s/{{DARWIN_ARM64_SHA}}/$DARWIN_ARM64_SHA/g" Formula/awd-cli.rb
-          sed -i "s/{{DARWIN_X86_64_SHA}}/$DARWIN_X86_64_SHA/g" Formula/awd-cli.rb
-          sed -i "s/{{LINUX_X86_64_SHA}}/$LINUX_X86_64_SHA/g" Formula/awd-cli.rb
+          sed -i "s/{{VERSION}}/$CLEAN_VERSION/g" Formula/apm-cli.rb
+          sed -i "s/{{DARWIN_ARM64_SHA}}/$DARWIN_ARM64_SHA/g" Formula/apm-cli.rb
+          sed -i "s/{{DARWIN_X86_64_SHA}}/$DARWIN_X86_64_SHA/g" Formula/apm-cli.rb
+          sed -i "s/{{LINUX_X86_64_SHA}}/$LINUX_X86_64_SHA/g" Formula/apm-cli.rb
           
           echo "✅ Formula updated successfully"
 
@@ -45,11 +45,11 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add Formula/awd-cli.rb
+          git add Formula/apm-cli.rb
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "Update AWD CLI to v${{ github.event.client_payload.release.version }}"
+            git commit -m "Update APM CLI to v${{ github.event.client_payload.release.version }}"
             git push
             echo "✅ Formula update pushed to tap repository"
           fi
