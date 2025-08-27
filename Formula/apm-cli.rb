@@ -1,18 +1,18 @@
 class AwdCli < Formula
   desc "Agent Primitives Manager (APM): The NPM for AI-Native Development"
   homepage "https://github.com/danielmeppiel/apm-cli"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   if Hardware::CPU.arm? && OS.mac?
     url "https://github.com/danielmeppiel/apm-cli/releases/download/v#{version}/apm-darwin-arm64.tar.gz"
-    sha256 "e722de6715e7bdfe24c9747dd458e2e218b212445298c51e0f125c75bbd8f9ee"
+    sha256 "9ecd1130796ecc54a8ecac1a92f216c8bd70f72dc23915e02a822f8761b887bf"
   elsif Hardware::CPU.intel? && OS.mac?
     url "https://github.com/danielmeppiel/apm-cli/releases/download/v#{version}/apm-darwin-x86_64.tar.gz"
-    sha256 "ffb24eb5e38b0c17f30a2ea4aa29cd97fe81055a6702789dc63341d8668382c7"
+    sha256 "10cac5d5ede38abd3fabbbe0a189a9031739176ddedcfac5ba0ad03bb33e6165"
   elsif OS.linux? && Hardware::CPU.intel?
     url "https://github.com/danielmeppiel/apm-cli/releases/download/v#{version}/apm-linux-x86_64.tar.gz"
-    sha256 "81321f0243bf7a08795593beb08895d273ce61f9a558d82c59dac341b1ab1c3c"
+    sha256 "735f4f4decfb4281b0c5a912d00fa5a11c0e1d427386534f6a791b9531b867ef"
   end
 
   def install
