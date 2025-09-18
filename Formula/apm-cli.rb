@@ -1,4 +1,4 @@
-class AwdCli < Formula
+class ApmCli < Formula
   desc "Agent Primitives Manager (APM): The NPM for AI-Native Development"
   homepage "https://github.com/danielmeppiel/apm-cli"
   version "0.4.1"
