@@ -5,13 +5,13 @@ class AwdCli < Formula
   license "MIT"
 
   if Hardware::CPU.arm? && OS.mac?
-    url "https://github.com/danielmeppiel/apm-cli/releases/download/v#{version}/apm-darwin-arm64.tar.gz"
+    url "https://github.com/danielmeppiel/apm/releases/download/v#{version}/apm-darwin-arm64.tar.gz"
     sha256 "544a2098aa6234f4801233a830f6489bec2f425690ce6f1616cf933194cb9b4f"
   elsif Hardware::CPU.intel? && OS.mac?
-    url "https://github.com/danielmeppiel/apm-cli/releases/download/v#{version}/apm-darwin-x86_64.tar.gz"
+    url "https://github.com/danielmeppiel/apm/releases/download/v#{version}/apm-darwin-x86_64.tar.gz"
     sha256 "0b2b6cf10e7899886adcba2226a34f0373c2fe966f4e676e5c0ed21900acb74d"
   elsif OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/danielmeppiel/apm-cli/releases/download/v#{version}/apm-linux-x86_64.tar.gz"
+    url "https://github.com/danielmeppiel/apm/releases/download/v#{version}/apm-linux-x86_64.tar.gz"
     sha256 "d6404e5730bef5d2e97e136a6d27e491bd2318f1bd6dcb6fd9504bdba8613d60"
   end
 
