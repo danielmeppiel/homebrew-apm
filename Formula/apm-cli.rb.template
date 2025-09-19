@@ -1,6 +1,6 @@
 class AwdCli < Formula
-  desc "Agent Primitives Manager (APM): The NPM for AI-Native Development"
-  homepage "https://github.com/danielmeppiel/apm-cli"
+  desc "Agent Package Manager (APM): The NPM for AI-Native Development"
+  homepage "https://github.com/danielmeppiel/apm"
   version "{{VERSION}}"
   license "MIT"
 
