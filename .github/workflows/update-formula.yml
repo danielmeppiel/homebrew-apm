@@ -21,6 +21,7 @@ jobs:
           DARWIN_ARM64_SHA="${{ github.event.client_payload.checksums.darwin_arm64 }}"
           DARWIN_X86_64_SHA="${{ github.event.client_payload.checksums.darwin_x86_64 }}"
           LINUX_X86_64_SHA="${{ github.event.client_payload.checksums.linux_x86_64 }}"
+          LINUX_ARM64_SHA="${{ github.event.client_payload.checksums.linux_arm64 }}"
           
           # Remove 'v' prefix if present
           CLEAN_VERSION="${VERSION#v}"
@@ -29,6 +30,7 @@ jobs:
           echo "Darwin ARM64 SHA: $DARWIN_ARM64_SHA"
           echo "Darwin x86_64 SHA: $DARWIN_X86_64_SHA"
           echo "Linux x86_64 SHA: $LINUX_X86_64_SHA"
+          echo "Linux ARM64 SHA: $LINUX_ARM64_SHA"
           
           # Generate the formula from template
           cp Formula/apm-cli.rb.template Formula/apm-cli.rb
@@ -38,6 +40,7 @@ jobs:
           sed -i "s/{{DARWIN_ARM64_SHA}}/$DARWIN_ARM64_SHA/g" Formula/apm-cli.rb
           sed -i "s/{{DARWIN_X86_64_SHA}}/$DARWIN_X86_64_SHA/g" Formula/apm-cli.rb
           sed -i "s/{{LINUX_X86_64_SHA}}/$LINUX_X86_64_SHA/g" Formula/apm-cli.rb
+          sed -i "s/{{LINUX_ARM64_SHA}}/$LINUX_ARM64_SHA/g" Formula/apm-cli.rb
           
           echo "✅ Formula updated successfully"
 
