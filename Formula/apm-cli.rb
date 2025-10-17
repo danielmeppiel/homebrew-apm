@@ -10,7 +10,10 @@ class ApmCli < Formula
   elsif Hardware::CPU.intel? && OS.mac?
     url "https://github.com/danielmeppiel/apm/releases/download/v#{version}/apm-darwin-x86_64.tar.gz"
     sha256 "52faf006798e4012b6276773905141b66d9752c470971f51f710735dac8fccdd"
-  elsif OS.linux? && Hardware::CPU.intel?
+  elsif Hardware::CPU.arm? && OS.linux?
+    url "https://github.com/danielmeppiel/apm/releases/download/v#{version}/apm-linux-arm64.tar.gz"
+    sha256 "placeholder_sha256_for_linux_arm64_will_be_updated_by_workflow"
+  elsif Hardware::CPU.intel? && OS.linux?
     url "https://github.com/danielmeppiel/apm/releases/download/v#{version}/apm-linux-x86_64.tar.gz"
     sha256 "55eca8060d9c65e3b1a9180f8f4d2ab004132297632d465e6aac72ec199d5b3e"
   end
