@@ -1,21 +1,21 @@
 class ApmCli < Formula
   desc "Agent Package Manager (APM): The NPM for AI-Native Development"
   homepage "https://github.com/danielmeppiel/apm"
-  version "0.6.1"
+  version "0.6.2"
   license "MIT"
 
   if Hardware::CPU.arm? && OS.mac?
     url "https://github.com/danielmeppiel/apm/releases/download/v#{version}/apm-darwin-arm64.tar.gz"
-    sha256 "09fd7bab576ea15e9386961f4cd407150c3d958659028eac899c85b663a5a7d7"
+    sha256 "f943d80d45e262faf27c1025b34db8012a23cbdc1dd2a9e9c604d4074f892ffb"
   elsif Hardware::CPU.intel? && OS.mac?
     url "https://github.com/danielmeppiel/apm/releases/download/v#{version}/apm-darwin-x86_64.tar.gz"
-    sha256 "5875d7791f328f68023751a8e8e8f9b0c94a467a463d491ffa60196ee7205635"
+    sha256 "454fb2f60a608c1706003cb7340214db3a1b486024edcf3e58cab57698b1d35c"
   elsif Hardware::CPU.arm? && OS.linux?
     url "https://github.com/danielmeppiel/apm/releases/download/v#{version}/apm-linux-arm64.tar.gz"
-    sha256 "4a91ae2d04f60cccdfd4840262a7ba29a3982580e16e74adabb0caa6adbb0cee"
+    sha256 "6e5f93573ce322c8f259483c00f712e1638fcf0f294e10412ea46a86b6132add"
   elsif Hardware::CPU.intel? && OS.linux?
     url "https://github.com/danielmeppiel/apm/releases/download/v#{version}/apm-linux-x86_64.tar.gz"
-    sha256 "04c67a87e91be2a6ac7abf9450f3d8912ad3f75b4b43d4db57e81720ac67b2e5"
+    sha256 "73047fae67445540b2fb06da9749aee5cf9748cf7785aa44b46568790fa7ea8b"
   end
 
   def install
